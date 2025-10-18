@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Adaptive Form (Safe Demo)</title>
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form validation="auto">
+  <h1>Login / Signup Form</h1>
+
+  <label for="fullname">Full Name</label>
+  <input id="fullname" name="fullname" validation="name" placeholder="Enter your full name">
+
+  <label for="phone">Phone</label>
+  <input id="phone" name="phone" validation="phone" placeholder="e.g., +45 3977 4000">
+
+  <label for="email">Email</label>
+  <input id="email" name="email" validation="email" placeholder="you@example.com">
+
+  <label for="password">Password</label>
+  <div class="password-container">
+    <input id="password" name="password" validation="password" type="password" placeholder="Enter password">
+    <span class="password-toggle" id="toggle-password">
+      <svg viewBox="0 0 24 24">
+        <path id="eye-path" d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" stroke="#aaa" stroke-width="2" fill="none"/>
+        <circle id="eye-pupil" cx="12" cy="12" r="2" fill="#aaa"/>
+      </svg>
+    </span>
+  </div>
+  <div class="password-strength" id="password-strength"></div>
+
+  <label for="confirm">Confirm Password</label>
+  <input id="confirm" name="confirm" validation="confirm" for="password" type="password" placeholder="Re-enter password">
+
+  <div class="note">* Real-time validation & password strength. No data is submitted anywhere.</div>
+
+  <button type="submit">Submit</button>
+  <div class="success-message" id="success-message">Form validated successfully!</div>
+</form>
+
+<!-- Link to external JS -->
+<script src="script.js"></script>
+</body>
+</html>
